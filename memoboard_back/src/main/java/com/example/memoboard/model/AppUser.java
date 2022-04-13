@@ -1,9 +1,9 @@
 package com.example.memoboard.model;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.Hibernate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,27 +11,31 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @NoArgsConstructor
 @Entity
 public class AppUser implements UserDetails {
 
     @SequenceGenerator(
-            name = "user_sequence",
-            sequenceName = "user_sequence",
+            name = "app_user_sequence",
+            sequenceName = "app_user_sequence",
             allocationSize = 1)
     @Id
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "user_sequence"
+            generator = "app_user_sequence"
     )
     private Long id;
+
     private String name;
+
     private String username;
+
     private String email;
+
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -56,16 +60,6 @@ public class AppUser implements UserDetails {
     }
 
     @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public String getUsername() {
-        return username;
-    }
-
-    @Override
     public boolean isAccountNonExpired() {
         return true;
     }
@@ -85,5 +79,16 @@ public class AppUser implements UserDetails {
         return enabled;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        AppUser appUser = (AppUser) o;
+        return id != null && Objects.equals(id, appUser.id);
+    }
 
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }
