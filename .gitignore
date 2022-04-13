@@ -12,6 +12,7 @@
 /memoboard/yarn-error.log
 
 # IDEs and editors
+.idea
 /memoboard/.idea
 /memoboard/.project
 /memoboard/.classpath
@@ -19,6 +20,10 @@
 /memoboard/*.launch
 /memoboard/.settings/
 /memoboard/*.sublime-workspace
+/memoboard_back/.idea
+/memoboard_back/*.iws
+/memoboard_back/*.iml
+/memoboard_back/*.ipr
 
 # Visual Studio Code
 /memoboard/.vscode/*
@@ -57,12 +62,6 @@
 /memoboard_back/.settings
 /memoboard_back/.springBeans
 /memoboard_back/.sts4-cache
-
-### IntelliJ IDEA ###
-/memoboard_back/.idea
-/memoboard_back/*.iws
-/memoboard_back/*.iml
-/memoboard_back/*.ipr
 
 ### NetBeans ###
 /memoboard_back/nbproject/private/
