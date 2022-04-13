@@ -1,5 +1,78 @@
-# Default ignored files
-/shelf/
-/.idea
-# Editor-based HTTP Client requests
-/httpRequests/
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/memoboard/dist
+/memoboard/tmp
+/memoboard/out-tsc
+/memoboard/bazel-out
+
+# Node
+/memoboard/node_modules
+/memoboard/npm-debug.log
+/memoboard/yarn-error.log
+
+# IDEs and editors
+/memoboard/.idea
+/memoboard/.project
+/memoboard/.classpath
+/memoboard/.c9/
+/memoboard/*.launch
+/memoboard/.settings/
+/memoboard/*.sublime-workspace
+
+# Visual Studio Code
+/memoboard/.vscode/*
+/memoboard/!.vscode/settings.json
+/memoboard/!.vscode/tasks.json
+/memoboard/!.vscode/launch.json
+/memoboard/!.vscode/extensions.json
+/memoboard/.history/*
+
+# Miscellaneous
+/memoboard/.angular/cache
+/memoboard/.sass-cache/
+/memoboard/connect.lock
+/memoboard/coverage
+/memoboard/libpeerconnection.log
+/memoboard/testem.log
+/memoboard/typings
+
+# System files
+/memoboard/.DS_Store
+/memoboard/Thumbs.db
+
+## memoboard_back ##
+
+/memoboard_back/HELP.md
+/memoboard_back/target/
+/memoboard_back/!.mvn/wrapper/maven-wrapper.jar
+/memoboard_back/!**/src/main/**/target/
+/memoboard_back/!**/src/test/**/target/
+
+### STS ###
+/memoboard_back/.apt_generated
+/memoboard_back/.classpath
+/memoboard_back/.factorypath
+/memoboard_back/.project
+/memoboard_back/.settings
+/memoboard_back/.springBeans
+/memoboard_back/.sts4-cache
+
+### IntelliJ IDEA ###
+/memoboard_back/.idea
+/memoboard_back/*.iws
+/memoboard_back/*.iml
+/memoboard_back/*.ipr
+
+### NetBeans ###
+/memoboard_back/nbproject/private/
+/memoboard_back/nbbuild/
+/memoboard_back/dist/
+/memoboard_back//nbdist/
+/memoboard_back/.nb-gradle/
+/memoboard_back/build/
+/memoboard_back/!**/src/main/**/build/
+/memoboard_back/!**/src/test/**/build/
+
+### VS Code ###
+/memoboard_back/.vscode/
